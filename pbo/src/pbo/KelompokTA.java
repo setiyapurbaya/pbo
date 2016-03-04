@@ -11,6 +11,19 @@ package pbo;
  */
 public class KelompokTA {
     private String topik;
-    private Mahasiswa anggota[]
+    private int nAnggota;
+    private Mahasiswa[] anggota;
+    
+    public void addanggotakelompok(Mahasiswa a){
+        if(nAnggota<length(anggota)){
+            anggota[nAnggota]=p;
+            nAnggota++;
+    }}
+    
+    public Mahasiswa getanggotabyindex(int n){}
+    
+    public Mahasiswa getanggotabyNIM(){}
+    
+    public void removeanggota(){}
     
 }
