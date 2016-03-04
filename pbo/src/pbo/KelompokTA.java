@@ -16,14 +16,30 @@ public class KelompokTA {
     
     public void addanggotakelompok(Mahasiswa a){
         if(nAnggota<length(anggota)){
-            anggota[nAnggota]=p;
+            anggota[nAnggota]=a;
             nAnggota++;
     }}
     
-    public Mahasiswa getanggotabyindex(int n){}
+    public Mahasiswa getanggotabyindex(int n){
+        return anggota[n];
+    }
     
-    public Mahasiswa getanggotabyNIM(){}
+    public Mahasiswa getanggotabyNIM(long NIM){
+        for(int i=0;i<=length(anggota);i++){
+            if(NIM=anggota[i].getNIM){
+                i=length(anggota)+1;
+                return anggota[i];
+            }
+        }
+    }
     
-    public void removeanggota(){}
+    public void removeanggota(long NIM){
+        for(int i=0;i<=length(anggota);i++){
+            if(NIM=anggota[i].getNIM){
+                i=length(anggota)+1;
+                anggota[i]=null;
+            }
+        }
+    }
     
 }
