@@ -29,13 +29,14 @@ public class KelompokTA {
         }
         return null;
     }
+    /*
     public void removeAnggota(long NIM){
-        for(int i=0;i<=length(anggota);i++){
-            if(NIM=anggota[i].getNIM){
-                i=length(anggota)+1;
-                anggota[i]=null;
+        for(int i=0;i<anggota.length;i++){
+            if(NIM == anggota[i].getNIM()){
+                
             }
         }
     }
+    */
     
 }
