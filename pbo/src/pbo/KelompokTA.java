@@ -1,14 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ Kelompok 8 Sistem Informasi Pengolahan Data-TA
+ - Imam Rahman 1301140150
+ - Ika Setyasari 1301144020
+ - Laela Citra Asih 1301144300
  */
 package pbo;
-
-/**
- *
- * @author ASUS PC
- */
 public class KelompokTA {
     private String topik;
     private int nAnggota;

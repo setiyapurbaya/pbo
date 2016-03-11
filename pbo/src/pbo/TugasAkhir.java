@@ -5,6 +5,6 @@
  - Laela Citra Asih 1301144300
  */
 package pbo;
-public class Mahasiswa {
+public class TugasAkhir {
     
 }
