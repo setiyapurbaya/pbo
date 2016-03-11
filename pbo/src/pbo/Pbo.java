@@ -8,6 +8,7 @@ package pbo;
 public class Pbo {
     
     public static void main(String[] args) {
+        System.out.println("ganteng");
         System.out.println("Test");
         Dosen d0 = new Dosen("Dosen0","AAA","SIDE");
         Dosen d1 = new Dosen("Dosen1","BBB","SIDE");
