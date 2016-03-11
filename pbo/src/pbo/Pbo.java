@@ -11,8 +11,8 @@ public class Pbo {
         System.out.println("Test");
         Dosen d0 = new Dosen("Dosen0","AAA","SIDE");
         Dosen d1 = new Dosen("Dosen1","BBB","SIDE");
-        Mahasiswa m0 = new Mahasiswa("Mahasiswa0",012,"SIDE");
-        Mahasiswa m1 = new Mahasiswa("Mahasiswa1",123,"SIDE");
+        Mahasiswa m0 = new Mahasiswa("Mahasiswa0","012","SIDE");
+        Mahasiswa m1 = new Mahasiswa("Mahasiswa1","123","SIDE");
         
         //Dosen dapat membuat suatu kelompok TA dengan topik tertentu
         d0.CreateKelompokTA("pbo");
@@ -20,7 +20,7 @@ public class Pbo {
         //Dosen dapat menambahkan / menghapus anggota kelompok TA
         d0.GetKelompok("pbo").addAnggota(m0);
         d0.GetKelompok(0).addAnggota(m1);
-        d0.GetKelompok("pbo").removeAnggota(123);
+        d0.GetKelompok("pbo").removeAnggota("123");
         /*optional menampilkan informasi kelompok*/
         System.out.println("Nama Topik : "+d0.GetKelompok("pbo").getTopik());
         System.out.println("Anggota    : ");
@@ -31,7 +31,8 @@ public class Pbo {
         System.out.println(m0.getTugasAkhir().getJudul());
         
         //Dosen dapat menambahkan dirinya menjadi pembimbing suatu tugas akhir dari seorang mahasiswa
-                
+        d0.GetKelompok("pbo").getAnggota("012").getTugasAkhir().setPembimbing(d0, 0);
+        d0.setStatus("Pembimbing 1");
         //Mahasiswa dapat merevisi judul TA
         m0.getTugasAkhir().setJudul("sisfo TA");
         /*optional menampilkan judul TA*/
@@ -39,12 +40,12 @@ public class Pbo {
         
         //Mahasiswa memiliki status sudah lulus atau belum
         System.out.println("Status sebelum  : "+m0.getStatus()); 
-        d0.GetKelompok("pbo").getAnggota(123).setStatus("Lulus");
+        d0.GetKelompok("pbo").getAnggota("012").setStatus("Lulus");
         /*optional menampilkan status lulus atau belum lulus*/
         System.out.println("Status sebelum  : "+m0.getStatus());
 
         //Dosen memiliki status bisa sebagai pembimbing 1 atau 2
-
+        System.out.println(d0.getStatus());
     }
     
 }

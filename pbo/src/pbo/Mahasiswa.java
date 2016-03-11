@@ -8,16 +8,17 @@ package pbo;
 public class Mahasiswa extends Orang {
     private TugasAkhir tugasAkhir;
     private String status;
-    private long NIM;
+    private String NIM;
     
-    public Mahasiswa(String nama,long nim, String kk){
+    public Mahasiswa(String nama,String nim, String kk){
         super(nama,kk);
         this.NIM = nim;
+        createStatus();
     }
-    public void setNIM(long nim){
+    public void setNIM(String nim){
         this.NIM = nim;
     }
-    public long getNIM(){
+    public String getNIM(){
         return NIM;
     }
     public void createTA(String judul){
@@ -26,7 +27,7 @@ public class Mahasiswa extends Orang {
     public TugasAkhir getTugasAkhir(){
         return tugasAkhir;
     }
-    public void createStatus(String status){
+    public void createStatus(){
         this.status = "Belum Lulus";
     }
     public void setStatus(String status){

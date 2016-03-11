@@ -9,6 +9,7 @@ public class Dosen extends Orang{
     private KelompokTA[] topikTA = new KelompokTA[10];
     private String kode;
     private int nTopik;
+    private String status;
     
     public Dosen(String nama, String kode, String kk){
         super(nama,kk);
@@ -44,6 +45,12 @@ public class Dosen extends Orang{
         for(int i=n;i<nTopik-1;i++){
                 topikTA[i]=topikTA[i+1];
             }
-            nTopik--;
-        }
-}
+        nTopik--;
+    }
+    public void setStatus(String s){
+        status = s;
+    }
+    public String getStatus(){
+        return status;
+    }
+}	
