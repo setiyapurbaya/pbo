@@ -7,28 +7,28 @@
 package pbo;
 public class KelompokTA {
     private String topik;
-    private Mahasiswa[] anggota;
+    private Mahasiswa[] anggota = new Mahasiswa[2];
     private int nAnggota;
     
     public void addAnggota(Mahasiswa m){
-        if(nAnggota<length(anggota)){
+        if(nAnggota<anggota.length){
             anggota[nAnggota]= m;
             nAnggota++;
-    }}
+        }
+    }
     
     public Mahasiswa getAnggota(int n){
         return anggota[n];
     }
     
     public Mahasiswa getAnggota(long NIM){
-        for(int i=0;i<=length(anggota);i++){
-            if(NIM=anggota[i].getNIM){
-                i=length(anggota)+1;
+        for(int i=0;i<anggota.length;i++){
+            if(NIM == anggota[i].getNIM()){
                 return anggota[i];
             }
         }
+        return null;
     }
-    
     public void removeAnggota(long NIM){
         for(int i=0;i<=length(anggota);i++){
             if(NIM=anggota[i].getNIM){

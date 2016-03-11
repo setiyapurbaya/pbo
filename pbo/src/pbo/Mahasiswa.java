@@ -7,12 +7,24 @@
 package pbo;
 public class Mahasiswa {
     private TugasAkhir tugasAkhir;
-    private String judul;
+    private String status;
+    private long NIM;
+    
+    public void setNIM(long nim){
+        this.NIM = nim;
+    }
+    public long getNIM(){
+        return NIM;
+    }
     public void createTA(String judul){
-        this.judul = judul;
+        tugasAkhir = new TugasAkhir(judul);
     }
     
-    public String getTA(String nama){
-        return judul;
-    };
+    public void createStatus(String status){
+        this.status = "Belum Lulus";
+    }
+    
+    public void setStatus(String status){
+        this.status = status;
+    }
 }

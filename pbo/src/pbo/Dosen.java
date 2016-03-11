@@ -5,7 +5,7 @@
  - Laela Citra Asih 1301144300
  */
 package pbo;
-public class DOSEN {
+public class Dosen {
     private KelompokTA[] topikTA;
     private String kode;
     
