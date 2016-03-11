@@ -6,11 +6,15 @@
  */
 package pbo;
 public class Dosen {
-    private KelompokTA[] topikTA;
+    private KelompokTA[] topikTA = new KelompokTA[10];
     private String kode;
+    private int nTopik;
     
     public void CreateKelompokTA(String topik) {
-        
+        if (nTopik< topikTA.length){
+            topikTA[nTopik] = new KelompokTA(topik);
+            nTopik++;
+        }
     }
     
     public String getKode() {
@@ -20,15 +24,21 @@ public class Dosen {
     public void setKode(String kode) {
         this.kode = kode;
     }
-    /*
-    //GetKelompok by index
-    public void GetKelompok(){
+    public KelompokTA GetKelompok(int n){
+        return topikTA[n];
     }
-    
-    //GetKelompok by index
-    public  GetKelompok1(){
+    public KelompokTA GetKelompok(String topik){
+        for(int i=0;i<nTopik;i++){
+            if(topikTA[i].getTopik().equals(topik)){
+                return topikTA[i];
+            }
+        }
+        return null;
     }
-    */
-    public void deleteKelompok(){
-    }
+    public void deleteKelompok(int n){
+        for(int i=n;i<nTopik-1;i++){
+                topikTA[i]=topikTA[i+1];
+            }
+            nTopik--;
+        }
 }

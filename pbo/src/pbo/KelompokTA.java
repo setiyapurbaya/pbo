@@ -10,13 +10,19 @@ public class KelompokTA {
     private Mahasiswa[] anggota = new Mahasiswa[2];
     private int nAnggota;
     
+    public KelompokTA(String topik){
+        this.topik = topik;
+    }
+    
     public void addAnggota(Mahasiswa m){
         if(nAnggota<anggota.length){
             anggota[nAnggota]= m;
             nAnggota++;
         }
     }
-    
+   public String getTopik(){
+       return topik;
+   } 
     public Mahasiswa getAnggota(int n){
         return anggota[n];
     }
@@ -29,13 +35,21 @@ public class KelompokTA {
         }
         return null;
     }
-    /*
+    
     public void removeAnggota(long NIM){
-        for(int i=0;i<anggota.length;i++){
+        int j = -1;
+        for(int i=0;i<nAnggota;i++){
             if(NIM == anggota[i].getNIM()){
-                
+                j = i;
+                anggota[i] = null;
             }
         }
+        if (j!= -1){
+            for(int i=j;i<nAnggota-1;i++){
+                anggota[i]=anggota[i+1];
+            }
+            nAnggota--;
+        }
     }
-    */
+    
 }
