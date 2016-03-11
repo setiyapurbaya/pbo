@@ -26,19 +26,19 @@ public class KelompokTA {
         return anggota[n];
     }
     
-    public Mahasiswa getAnggota(long NIM){
-        for(int i=0;i<anggota.length;i++){
-            if(NIM == anggota[i].getNIM()){
+    public Mahasiswa getAnggota(String NIM){
+        for(int i=0;i<nAnggota;i++){
+            if(NIM.equals(anggota[i].getNIM())){
                 return anggota[i];
             }
         }
         return null;
     }
     
-    public void removeAnggota(long NIM){
+    public void removeAnggota(String NIM){
         int j = -1;
         for(int i=0;i<nAnggota;i++){
-            if(NIM == anggota[i].getNIM()){
+            if(NIM.equals(anggota[i].getNIM())){
                 j = i;
                 anggota[i] = null;
             }
