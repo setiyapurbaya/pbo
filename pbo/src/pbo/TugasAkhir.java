@@ -8,13 +8,14 @@ package pbo;
 public class TugasAkhir {
     private Dosen[] pembimbing = new Dosen[2];
     private String judul;
+    
     public TugasAkhir(String judul){
         this.judul = judul;
     }
-    public void setTugasAkhir(String judul){
+    public void setJudul(String judul){
         this.judul = judul;
     }
-    public String getTugasAkhir(){
+    public String getJudul(){
         return judul;
     } 
     public void setPembimbing(Dosen d,int i){
