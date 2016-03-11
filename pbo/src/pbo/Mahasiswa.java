@@ -6,5 +6,9 @@
  */
 package pbo;
 public class Mahasiswa {
+    private TugasAkhir tugasAkhir;
     
+    public void createTA(String judul){
+        
+    }
 }

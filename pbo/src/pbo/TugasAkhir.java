@@ -6,5 +6,17 @@
  */
 package pbo;
 public class TugasAkhir {
+    private Dosen[] pembimbing = new Dosen[2];
     
+    public void setPembimbing(Dosen d,int I){
+        
+    }
+    /*
+    public void getPembimbing(index){
+        
+    }
+    public void getPembimbing(kode dosen){
+        
+    }
+    */
 }

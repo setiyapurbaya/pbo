@@ -6,32 +6,20 @@
  */
 package pbo;
 public class DOSEN {
-    private String nama;
-    private int nip;
-    private int StatusPembimbing;
-    private KelompokTA topikTA[] t=new KelompokTA[10]; //Array KelompokTA terenkapsulasi private berukuran 10//
-    private int jumlahKelompokTA=0;
-   
-    //method CreateKelompokTA, menginstansiasi kelompokTA baru sesuai input//
+    private KelompokTA[] topikTA;
+    
     public void CreateKelompokTA(String topik) {
-        if(jumlahKelompokTA<10) {
-            t[jumlahKelompokTA]=new KelompokTA(topik);
-            jumlahKelompokTA++;
-        }
+        
     }
-   
-    //constructor untuk mengeset Status Pembimbing//
-    public DOSEN(int statusPembimbing) {
-        setStatusPembimbing(StatusPembimbing);
+    /*
+    //GetKelompok by index
+    public void GetKelompok(){
     }
     
-    //method setStatusPembimbing & getStatusPembimbing//
-    public void setStatusPembimbing(int StatusPembimbing) {
-        this.StatusPembimbing = StatusPembimbing;
+    //GetKelompok by index
+    public  GetKelompok1(){
     }
-    
-    public int getStatusPembimbing() {
-        return StatusPembimbing;
-    } 
-       
+    */
+    public void deleteKelompok(){
+    }
 }
