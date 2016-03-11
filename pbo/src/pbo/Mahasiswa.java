@@ -7,8 +7,12 @@
 package pbo;
 public class Mahasiswa {
     private TugasAkhir tugasAkhir;
-    
+    private String judul;
     public void createTA(String judul){
-        
+        this.judul = judul;
     }
+    
+    public String getTA(String nama){
+        return judul;
+    };
 }

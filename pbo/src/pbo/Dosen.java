@@ -7,9 +7,18 @@
 package pbo;
 public class DOSEN {
     private KelompokTA[] topikTA;
+    private String kode;
     
     public void CreateKelompokTA(String topik) {
         
+    }
+    
+    public String getKode() {
+        return kode;
+    }
+
+    public void setKode(String kode) {
+        this.kode = kode;
     }
     /*
     //GetKelompok by index

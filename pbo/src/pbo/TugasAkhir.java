@@ -8,15 +8,18 @@ package pbo;
 public class TugasAkhir {
     private Dosen[] pembimbing = new Dosen[2];
     
-    public void setPembimbing(Dosen d,int I){
-        
+    public void setPembimbing(Dosen d,int i){
+        this.pembimbing[i] = d;
     }
-    /*
-    public void getPembimbing(index){
-        
+    public Dosen getPembimbing(int i){
+        return pembimbing[i];
     }
-    public void getPembimbing(kode dosen){
-        
+    public Dosen getPembimbing(String kode){
+        for(int i=0;i<2;i++){
+            if (pembimbing[i].getKode().equals(kode)){
+                return pembimbing[i];
+            }
+        }
+        return null;
     }
-    */
 }
