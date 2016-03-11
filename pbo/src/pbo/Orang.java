@@ -33,6 +33,5 @@ public abstract class Orang {
     public void setKk(String kk) {
         this.kk = kk;
     }
-    
-    
+      
 }
