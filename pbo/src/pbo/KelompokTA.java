@@ -13,6 +13,7 @@ public class KelompokTA {
     public KelompokTA(String topik){
         this.topik = topik;
     }
+    
     public void addAnggota(Mahasiswa m){
         if(nAnggota<anggota.length){
             anggota[nAnggota]= m;
@@ -35,10 +36,10 @@ public class KelompokTA {
         return null;
     }
     
-    public void removeAnggota(String NIM){
+    public void removeAnggota(long NIM){
         int j = -1;
         for(int i=0;i<nAnggota;i++){
-            if(NIM.equals(anggota[i].getNIM())){
+            if(NIM == anggota[i].getNIM()){
                 j = i;
                 anggota[i] = null;
             }
